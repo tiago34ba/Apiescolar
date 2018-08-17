@@ -1,0 +1,117 @@
+<!-- TEMPLATE DA APLICAÇÃO -->
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<title>Sistema de Gestão escolar</title>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<!--
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/fontawesome/css/fontawesome-all.min.css">
+		-->
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body style="background-color: #57b0f81a;">
+		
+<nav class="navbar navbar-expand-lg navbar-inverse">
+  
+<a href="/#!/home" class="" ><i class=" light fas fa-book"></i> Home</a>
+
+ <div class="container">
+   
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"><span style="font-size: 30px;color: white;">Sistema de Gestão escolar</span></a>
+    </div>
+</div>
+  
+   <ul class="nav navbar-nav navbar-righ">
+     <!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up </a></li>-->
+      <li><a href="/#!/logoff"><span class="glyphicon glyphicon-log-in"></span> Sair </a></li>
+    </ul>
+</nav>
+  
+ <div ng-controller="ControllerAutenticacao"  data-ng-init="init()" class="container" ng-show="logado" >
+      
+	 <<div class="col-sm-1">
+	  <img src="img/usuario.png" class="media-object  img-responsive img-thumbnail" style="height: 83px;">
+	 </div>
+   
+   <div class="row" style="background-color: #c0c0c029;padding-top:20px">
+      
+    <div class="col-sm-2">
+      <b>Bem Vindo:</b>
+    </div>
+	<div class="col-sm-10">
+	 {{user_name}}
+	</div>
+    <div class="col-sm-2">
+       <b>Perfil do usuario: </b> 
+    </div>
+	{{user_perfil}}
+
+  </div>
+  
+  
+  
+</div>
+ 
+
+</div>
+	<br>
+	
+	
+     
+		<div class="container" ng-view>
+	
+		
+		</div> <!-- Aqui será rendereizada a view -->
+
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+		<script src="https://code.angularjs.org/1.6.9/angular-route.min.js"></script>
+<!--
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/angular.min.js"></script>
+		<script src="js/angular-route.min.js"></script>
+-->
+
+		<script type="text/javascript" src="app.js"></script>
+		<script type="text/javascript" src="contatos/controllers.js"></script>
+		<script type="text/javascript" src="contatos/routes.js"></script>
+		
+		<script type="text/javascript" src="chamados/controllers.js"></script>
+		<script type="text/javascript" src="chamados/routes.js"></script>
+
+		<script type="text/javascript" src="usuarios/controllers.js"></script>
+		<script type="text/javascript" src="usuarios/routes.js"></script>
+
+		<script type="text/javascript" src="autenticacao/controllers.js"></script>
+		<script type="text/javascript" src="autenticacao/routes.js"></script>
+
+		<script type="text/javascript" src="geral/controllers.js"></script>
+		<script type="text/javascript" src="geral/routes.js"></script>
+		
+		<script type="text/javascript" src="administracao/controllers.js"></script>
+		<script type="text/javascript" src="administracao/routes.js"></script>
+		
+		
+		<script type="text/javascript" src="aluno/controller.js"></script>
+		<script type="text/javascript" src="aluno/routes.js"></script>
+	
+		<script type="text/javascript" src="classe/controller.js"></script>
+		<script type="text/javascript" src="classe/routes.js"></script>
+		<script type="text/javascript" src="disciplina/controller.js"></script>
+		<script type="text/javascript" src="disciplina/routes.js"></script>
+		<script type="text/javascript" src="docente/controller.js"></script>
+		<script type="text/javascript" src="docente/routes.js"></script>
+		<script type="text/javascript" src="avaliacao/controller.js"></script>
+		<script type="text/javascript" src="avaliacao/routes.js"></script>
+		
+		
+	</body>
+</html>

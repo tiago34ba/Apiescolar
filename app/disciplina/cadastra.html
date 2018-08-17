@@ -1,0 +1,51 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h4>Cadastro das disciplina</h4>
+    </div>
+    <div class="panel-body">
+
+        <form name="FormAluno">
+
+
+
+
+
+
+            <div class="row">
+
+                <div class="form-group col-sm-12">
+                    <label for="nome">Nome</label>
+                    <input class="form-control" type="text" id="nome" ng-model="disciplina.capacidade" ng-required="true">
+                </div>
+                <!--
+    <div class="form-group col-sm-4">
+        <label for="login">Login</label>
+        <input class="form-control" type="text" id="login" ng-model="aluno.login" ng-required="true">
+    </div>
+    <div class="form-group col-sm-4">
+        <label for="senha">Senha</label>
+        <input class="form-control" type="password" id="senha" ng-model="aluno.senha" ng-required="true">
+
+	
+	</div>
+	   
+	   -->
+
+                <div class="form-group col-sm-4">
+                    <label for="nome">Carga Horaria</label>
+                    <input class="form-control" type="text" id="nascimento" ng-model="disciplina.carga_horaria" ng-required="true">
+                </div>
+
+
+                <div class="form-group col-sm-4">
+                    <label for="login">Valor</label>
+                    <input class="form-control" type="text" id="cpf" ng-model="disciplina.valor" ng-required="true">
+                </div>
+            </div>
+            <div class="panel-footer primary">
+                <a href="/#!/autenticacao" class="btn btn-danger">Cancelar</a>
+                <button ng-click="cadastrardisciplina(disciplina)" class="btn btn-primary" ng-disabled="Formdisciplina.$invalid">Salvar</button>
+            </div>
+        </form>
+    </div>
+</div>

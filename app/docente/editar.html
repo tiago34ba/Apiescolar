@@ -1,0 +1,22 @@
+
+
+
+ 
+
+<div class="panel panel-primary">
+<div class="panel-heading"><center><h3>Gerenciamento de Docente</h3></center></div>
+<div class="panel-body">
+<form name="FormEditarContato">
+    <input type="hidden" ng-model="docente._id" ng-required="true"/>
+	
+	<div class="form-group">
+		<h4><b>nome</b> {{docente.nome}}</h4>
+        <h4><b>Data de nascimento</b> {{docente.data_nascimento| date:'MM/dd/yyyy'}} Às {{chamado.data_abertura| date:'h:mma'}}</h4>
+		<h4><b>cpf:</b>{{docente.cpf}}</h4>
+		<h4><b>rg</b>  {{docente.rg}}</h4>
+		<h4><b>formacao:</b>  {{docente.formacao}}</h4>
+	</div>
+		   <a href="/#!/autenticacao" class="btn btn-danger" >Cancelar</a>
+	   <button ng-click="editardocente(docente)" class="btn btn-primary" ng-disabled="FormEditardocente.$invalid">Confirmar</button>
+    </center>
+	</form>

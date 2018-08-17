@@ -1,0 +1,28 @@
+<h1>Editar Usuario</h1>
+
+<form name="FormEditarUsuario">
+
+
+
+<div class="panel panel-primary">
+<div class="panel-heading"><h4>Lista De Usuarios</h4></div>
+<div class="panel-body">
+	<input type="hidden" ng-model="usuario._id" ng-required="true"/>
+	<div class="form-group">
+		<label for="nome">Nome</label>
+		<input class="form-control" type="text" id="nome" ng-model="usuario.nome" ng-required="true">
+	</div>
+	<div class="form-group">
+		<label for="login">Login</label>
+		<input class="form-control" type="text" id="login" ng-model="usuario.login" ng-required="true">
+	</div>
+	
+	</div>
+	<div class="panel-footer">
+	<center>
+	<a href="/#!/usuarios/listar" class="btn btn-danger">Cancelar</a>
+	<button ng-click="editarUsuario(usuario)" class="btn btn-primary" ng-disabled="FormEditarUsuario.$invalid">Enviar</button>
+   </center>
+  </div>
+</div>
+</form>

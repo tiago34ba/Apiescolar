@@ -1,0 +1,18 @@
+<h1>Cadastrar Usuario</h1>
+
+<form name="FormCadastrarUsuario">
+	<div class="form-group">
+		<label for="nome">Nome</label>
+		<input class="form-control" type="text" id="nome" ng-model="usuario.nome" ng-required="true">
+	</div>
+	<div class="form-group">
+		<label for="login">Login</label>
+		<input class="form-control" type="text" id="login" ng-model="usuario.login" ng-required="true">
+	</div>
+	<div class="form-group">
+		<label for="senha">Senha</label>
+		<input class="form-control" type="password" id="senha" ng-model="usuario.senha" ng-required="true">
+	</div>
+	<a href="/#!/usuarios/listar" class="btn">Cancelar</a>
+	<button ng-click="cadastrarUsuarios(usuario)" class="btn btn-primary" ng-disabled="FormCadastrarUsuario.$invalid">Enviar</button>
+</form>
