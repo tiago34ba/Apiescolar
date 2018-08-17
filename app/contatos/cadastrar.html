@@ -1,0 +1,18 @@
+<h1>Cadastrar Contato</h1>
+
+<form name="FormCadastrarContato">
+	<div class="form-group">
+		<label for="nome">Nome</label>
+		<input class="form-control" type="text" id="nome" ng-model="contato.nome" ng-required="true">
+	</div>
+	<div class="form-group">
+		<label for="telefone">Telefone</label>
+		<input class="form-control" type="text" id="telefone" ng-model="contato.telefone" ng-required="true">
+	</div>
+	<div class="form-group">
+		<label for="email">E-mail</label>
+		<input class="form-control" type="text" id="email" ng-model="contato.email" ng-required="true">
+	</div>
+	<a href="/#!/contatos/listar" class="btn">Cancelar</a>
+	<button ng-click="cadastrarContatos(contato)" class="btn btn-primary" ng-disabled="FormCadastrarContato.$invalid">Enviar</button>
+</form>

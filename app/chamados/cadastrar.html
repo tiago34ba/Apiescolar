@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+<form name="FormCadastrarContato">
+
+
+
+    <div class="panel panel-primary">
+        <div class="panel-heading"><h4>Abertura de chamados</h4></div>
+        <div class="panel-body">
+            <div class="form-group">
+                <label for="nome">Categoria:*</label>
+                <div ng-app="myApp" ng-controller="myCtrl">
+                    <select class="form-control" id="categoria_chamado" ng-model="chamado.categoria_chamado"  ng-options="c for c in CategoriaOptions" ng-required="true" style="height: 34px;">
+                    </select>
+                </div>
+
+            </div>
+            <div class="form-group">
+                <label for="titulo">Titulo do chamado:* </label>
+                <input class="form-control" type="text" id="titulo" ng-model="chamado.titulo" ng-required="true">
+            </div>
+            <div class="form-group">
+                <label for="telefone">Descrição do Chamado:*:</label>
+                <textarea rows="5" cols="50" class="form-control" type="text" id="descricao" ng-model="chamado.descricao" ng-required="true"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="telefone">Data Abertura:*:</label>
+                <input id="date" type="datetime-local" rows="5" cols="50" class="form-control" type="text" id="data_abertura" ng-model="chamado.data_abertura" ng-required="true">
+            </div>
+
+
+            <center>
+                <a href="/#!/chamado/listar" class="btn btn-danger" >Cancelar</a>
+                <button ng-click="cadastrarChamados(chamado)" class="btn btn-primary" ng-disabled="FormCadastrarChamado.$invalid">Abrir Chamado</button>
+            </center>
+        </div>
+    </div>
+
+</form>

@@ -1,0 +1,53 @@
+
+
+
+ 
+
+<div class="panel panel-primary">
+<div class="panel-heading"><center><h3>Gerenciamento de Chamados</h3></center></div>
+<div class="panel-body">
+<form name="FormEditarContato">
+    <input type="hidden" ng-model="chamado._id" ng-required="true"/>
+	
+	<div class="form-group">
+		<h4><b>Assunto:</b> {{chamado.titulo}}</h4>
+        <h4><b>Data da Abertura:</b> {{chamado.data_abertura| date:'MM/dd/yyyy'}} Às {{chamado.data_abertura| date:'h:mma'}}</h4>
+		<h4><b>situação Atual:</b>{{chamado.status}}</h4>
+		<h4><b>Requerente:</b>  {{chamado.Requerente}}</h4>
+		<h4><b>Feedback Atendimento:</b>  {{chamado.feed_back}}</h4>
+	</div>
+	
+	
+	<div class="form-group">
+	<label for="nome">Status Chamado:*</label>
+	     <select class="form-control" id="categoria_chamado" ng-model="chamado.status" ng-required="true"style="height: 34px;">
+	        <option value="Em Atendimento">Em Atendimento</option>
+			<option value="Atendido">Atendido</option>
+		    <option value="Fechado">Fechado</option>
+			<option value="Cancelado">Cancelado</option>
+			 <option value="Pendente">Pendente</option>
+		   
+	     </select>
+	</div>
+		
+	<div class="form-group">
+		<label for="telefone">Feedback do chamado:*:</label>
+		<textarea rows="5" cols="50" class="form-control" type="text" id="descricao" ng-model="chamado.feed_back" ng-required="true"></textarea>
+	</div>
+	
+	<div class="form-group">
+	
+		
+		
+		<label for="telefone">Informa a data do fechamento:*:</label>
+	   <input id="date" type="datetime-local" rows="5" cols="50" class="form-control" type="text" id="data_abertura" ng-model="chamado.data_fechamento" ng-required="true">
+	</div>
+	
+	
+	
+	
+	<center>
+	   <a href="/#!/chamados/listar" class="btn btn-danger" >Cancelar</a>
+	   <button ng-click="editarChamado(chamado)" class="btn btn-primary" ng-disabled="FormEditarChamado.$invalid">Confirmar</button>
+    </center>
+	</form>

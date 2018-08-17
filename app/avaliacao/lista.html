@@ -1,0 +1,35 @@
+<h1>Alunos</h1>
+
+
+<!--<span>{{'1288323623006' | date:'MM/dd/yyyy @ h:mma'}}</span><br>-->
+
+
+
+<div class="panel panel-primary">
+<div class="panel-heading"><h4>Lita de avaliações</h4></div>
+<div class="panel-body">
+<a href="/#!/avaliacao/cadastrar" class="btn btn-success"><i class="fas fa-plus"></i> Cadastrar</a>
+ 
+ 
+<table class="table table-stripped table-condensed">
+	<thead>
+		<tr>
+			<th>avaliacao1</th>
+			<th>avaliacao2</th>
+			<th>trabalho</th>
+                 </tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="avaliacao in avaliacao">
+			<td ng-bind="avaliacao.avaliacao1"></td>
+			<td ng-bind="avaliacao.avaliacao2"></td>
+                        <td ng-bind="avaliacao.trabalho"></td>
+                         <td>
+				<a href="/#!/avaliacao/editar/{{avaliacao._id}}" class="btn btn-info    btn-sm"><i class="fas fa-edit"></i></a>
+				<button ng-click="removeravaliacao(avaliacao)" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> </button>
+			</td>
+		</tr>
+	</tbody>
+</table>
+  </div>
+</div>

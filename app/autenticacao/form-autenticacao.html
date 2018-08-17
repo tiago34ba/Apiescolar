@@ -1,0 +1,29 @@
+<h1>Autenticação</h1>
+
+<form name="FormAutenticacaoContato">
+
+
+    
+     <div class="row" style="border: solid 1px silver;
+    padding: 20px;
+    background-color: #03A9F4;">
+	 <div class="col-sm-3">
+	 <img src="img/login.png">
+	 
+	 </div>
+	 <div class="col-sm-5" style="border:solid 1px silver; padding:10px">
+	<div class="form-group">
+		<label for="login">Login</label>
+		<input class="form-control" type="text" id="login" ng-model="autenticacao.login" ng-required="true">
+	</div>
+	<div class="form-group">
+		<label for="senha">Senha</label>
+		<input class="form-control" type="password" id="senha" ng-model="autenticacao.senha" ng-required="true">
+	</div>
+	<button ng-click="autenticar(autenticacao)" class="btn btn-primary" ng-disabled="FormAutenticacaoContato.$invalid">Enviar</button>
+	<br>
+	<a href="/#!/geral/cadastre_se" class="btn">cadastra-se</a>
+	</div>
+	</div>
+	
+</form>

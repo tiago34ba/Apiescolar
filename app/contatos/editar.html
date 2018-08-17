@@ -1,0 +1,19 @@
+<h1>Editar Contato</h1>
+
+<form name="FormEditarContato">
+	<input type="hidden" ng-model="contato._id" ng-required="true"/>
+	<div class="form-group">
+		<label for="nome">Nome</label>
+		<input class="form-control" type="text" id="nome" ng-model="contato.nome" ng-required="true">
+	</div>
+	<div class="form-group">
+		<label for="telefone">Telefone</label>
+		<input class="form-control" type="text" id="telefone" ng-model="contato.telefone" ng-required="true">
+	</div>
+	<div class="form-group">
+		<label for="email">E-mail</label>
+		<input class="form-control" type="text" id="email" ng-model="contato.email" ng-required="true">
+	</div>
+	<a href="/#!/contatos/listar" class="btn">Cancelar</a>
+	<button ng-click="editarContato(contato)" class="btn btn-primary" ng-disabled="FormEditarContato.$invalid">Enviar</button>
+</form>

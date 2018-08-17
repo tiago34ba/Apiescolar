@@ -1,0 +1,22 @@
+
+
+
+ 
+
+<div class="panel panel-primary">
+<div class="panel-heading"><center><h3>Gerenciamento de Classe</h3></center></div>
+<div class="panel-body">
+<form name="FormEditarContato">
+    <input type="hidden" ng-model="classe._id" ng-required="true"/>
+	
+	<div class="form-group">
+		<h4><b>capacidade</b> {{classe.capacidade}}</h4>
+       		<h4><b>anda:</b>{{classe.anda}}</h4>
+		<h4><b>numero:</b>  {{classe.numero}}</h4>
+		</div>
+		</div>
+		<center>
+	   <a href="/#!/classe/listar" class="btn btn-danger" >Cancelar</a>
+	   <button ng-click="editarclasse(classe)" class="btn btn-primary" ng-disabled="FormEditarclasse.$invalid">Confirmar</button>
+    </center>
+	</form>

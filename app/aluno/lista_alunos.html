@@ -1,0 +1,41 @@
+<h1>Alunos</h1>
+
+
+<!--<span>{{'1288323623006' | date:'MM/dd/yyyy @ h:mma'}}</span><br>-->
+
+
+
+<div class="panel panel-primary">
+<div class="panel-heading"><h4>Lita de Alunos</h4></div>
+<div class="panel-body">
+<a href="/#!/aluno/cadastro" class="btn btn-success"><i class="fas fa-plus"></i> Cadastrar</a>
+ 
+ 
+<table class="table table-stripped table-condensed">
+	<thead>
+		<tr>
+			<th>nome</th>
+			<th>data_nascimento</th>
+			<th>cpf</th>
+			<th>rg</th>
+                        <th>mae</th>
+			<th>pai</th>
+            </tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="aluno in alunos">
+			<td ng-bind="aluno.nome"></td>
+			<td>{{aluno.nascimento| date:'MM/dd/yyyy - h:mm'}}</td>
+                        <td ng-bind="aluno.cpf"></td>
+                        <td ng-bind="aluno.rg"></td>
+                         <td ng-bind="aluno.mae"></td>
+                        <td ng-bind="aluno.pai"></td>
+			<td>
+				<a href="/#!/aluno/editar/{{aluno._id}}" class="btn btn-info    btn-sm"><i class="fas fa-edit"></i></a>
+				<button ng-click="removerAluno(aluno)" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> </button>
+			</td>
+		</tr>
+	</tbody>
+</table>
+  </div>
+</div>

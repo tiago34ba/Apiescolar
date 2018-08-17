@@ -1,0 +1,29 @@
+<h1>Cadastrar Usuario</h1>
+
+<form name="FormCadastreSe">
+    <div class="form-group">
+        <label for="nome">Nome</label>
+        <input class="form-control" type="text" id="nome" ng-model="usuario.nome" ng-required="true">
+    </div>
+    <div class="form-group">
+        <label for="login">Login</label>
+        <input class="form-control" type="text" id="login" ng-model="usuario.login" ng-required="true">
+    </div>
+    <div class="form-group">
+        <label for="senha">Senha</label>
+        <input class="form-control" type="password" id="senha" ng-model="usuario.senha" ng-required="true">
+    </div>
+
+    <div class="form-group">
+        <label for="senha" >perfil</label>
+
+        <select class="form-control" ng-model="usuario.perfil" ng-required="true">
+            <option value="adm">administrador</option>
+            <option value="usu">usuario</option>
+        </select>
+
+    </div>
+
+    <a href="/#!/autenticacao" class="btn">Cancelar</a>
+    <button ng-click="cadastrarUsuarios(usuario)" class="btn btn-primary" ng-disabled="FormCadastreSe.$invalid">Enviar</button>
+</form>
